@@ -1,0 +1,8 @@
+numpy>=1.26
+matplotlib>=3.8
+pillow>=10.0
+
+# extraction stages
+opencv-python>=4.9     # geometry stage
+torch>=2.2              # triage stage (src/stages/train_triage.py)
+torchvision>=0.17

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+
+# never publish: architect copyright + applicant personal data
+data/raw/
+data/derived/
+
+# regenerable: rebuild with src/render/build_corpus.py
+data/rendered/
+
+# committed: metadata only
+!data/corpus.jsonl

@@ -1,0 +1,49 @@
+# Repo root is this folder (contains .git); the project sits two levels
+# down. Patterns use **/ so they match at any depth -- a pattern with a
+# slash but no **/ is anchored HERE and silently misses the project.
+
+# --- environments, caches, editors, tool state ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+**/.claude/
+
+# --- archives ---
+*.zip
+*.7z
+*.tar.gz
+
+# --- generated corpus: regenerable from a seed, hundreds of MB ---
+**/data/sheets/
+**/data/debug/
+**/data/labels/
+**/data/truth/
+**/data/rendered/
+**/data/manifest.jsonl
+**/data/stage_outputs.json
+
+# --- real planning bundles: architect copyright + applicant personal data ---
+**/data/raw/
+**/data/derived/
+files/
+
+# --- model weights: too large and too churny for git history ---
+*.pt
+*.pth
+*.onnx
+*.pkl
+**/runs/
+
+# --- models/: exclude CONTENTS, not the directory, so negation works ---
+**/models/*
+!**/models/*.yaml
+!**/models/*.json
+
+# --- committed ---
+!**/data/corpus.jsonl
